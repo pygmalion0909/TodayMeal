@@ -1,16 +1,16 @@
 <template>
 	<div>
 		<router-link to="/">
-			<input type="button" value="Today Meal" id="todayMeal_btn" :disabled="$store.state.btnDisplay" />
+			<b-button type="button" id="todayMeal_btn" :disabled="$store.state.btnDisplay">Today Meal</b-button>
 		</router-link>
-		<router-link to="/detail">
-			<input type="button" value="Detail" id="detail_btn" :disabled="$store.state.btnDisplay" />
+		<router-link to="/manual">
+			<b-button type="button" id="detail_btn" :disabled="$store.state.btnDisplay">Manual</b-button>
 		</router-link>
 		<router-link to="/start">
-			<input type="button" value="Start" id="start_btn" @click="showBtn" :disabled="$store.state.btnDisplay" />
+			<b-button variant="danger" type="button" id="start_btn" @click="showBtn" :disabled="$store.state.btnDisplay">Start</b-button>
 		</router-link>
 		<router-link to="/userset">
-			<input type="button" value="UserSet" id="userSet_btn" @click="showBtn" :disabled="$store.state.btnDisplay" />
+			<b-button variant="success" type="button" id="userSet_btn" @click="showBtn" :disabled="$store.state.btnDisplay">UserSet</b-button>
 		</router-link>
 	</div>
 </template>

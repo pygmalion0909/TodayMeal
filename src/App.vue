@@ -16,11 +16,4 @@ export default {
 };
 </script>
 
-<style scoped>
-#app {
-	background: crimson;
-	/* text-align: center; */
-	width: 50%;
-	margin: 0 auto;
-}
-</style>
+<style></style>

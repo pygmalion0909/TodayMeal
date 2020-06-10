@@ -8,11 +8,11 @@ export default new VueRouter({
 	routes: [
 		{
 			path: '/',
-			redirect: '/detail',
+			redirect: '/manual',
 		},
 		{
-			path: '/detail',
-			component: () => import('@/views/DetailPage.vue'),
+			path: '/manual',
+			component: () => import('@/views/ManualPage.vue'),
 		},
 		{
 			path: '/start',

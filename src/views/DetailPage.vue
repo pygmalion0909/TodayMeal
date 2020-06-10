@@ -3,20 +3,16 @@
 		<div id="content">
 			<ul>
 				<li>
-					<span></span>
-					test1
+					"점심 뭐 먹을래?" 질문 하나로 시작 되었습니다.
 				</li>
 				<li>
-					<span></span>
-					test2
+					Today Meal은 랜덤으로 한끼메뉴를 선정합니다.
 				</li>
 				<li>
-					<span></span>
-					test3
+					Start를 눌려 랜덤 메뉴를 선택하세요.
 				</li>
 				<li>
-					<span></span>
-					test4
+					UserSet은 사용자가 임의로 메뉴를 선정하여 랜덤으로 선택 합니다.
 				</li>
 			</ul>
 		</div>

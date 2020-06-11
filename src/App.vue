@@ -11,7 +11,8 @@
 					<b-list-group-item>
 						<AppNav></AppNav>
 					</b-list-group-item>
-
+				</b-list-group>
+				<b-list-group flush>
 					<b-list-group-item>
 						<router-view></router-view>
 					</b-list-group-item>
@@ -36,6 +37,9 @@ export default {
 </script>
 
 <style>
+#test {
+	color: red;
+}
 #test_layout {
 	margin: 10px auto;
 }

@@ -7,19 +7,17 @@
 					<li v-for="(item, index) in this.$store.state.userSetCategory" :key="index">{{ index + 1 }}. {{ item }}</li>
 				</ul>
 			</div>
-			<div>
+			<div v-show="hiddenCategoryInput">
 				<form @submit.prevent="insertCategory">
 					<input type="text" v-model="categoryValue" />
 					<button type="submit">추가</button>
 				</form>
-			</div>
-			<div>
 				<button type="button" @click="completeCategory">완료</button>
 			</div>
+			<div v-show="showMealInput">
+				<UserSetMealPage></UserSetMealPage>
+			</div>
 		</div>
-		<b-list-group v-if="showMeal">
-			<UserSetMealPage></UserSetMealPage>
-		</b-list-group>
 	</div>
 </template>
 
@@ -32,7 +30,8 @@ export default {
 	data() {
 		return {
 			categoryValue: '',
-			showMeal: false,
+			showMealInput: false,
+			hiddenCategoryInput: true,
 		};
 	},
 	created() {
@@ -55,7 +54,14 @@ export default {
 		},
 		completeCategory() {
 			if (this.$store.state.userSetCategory.length !== 0) {
-				this.showMeal = true;
+				this.showMealInput = true;
+				this.hiddenCategoryInput = false;
+				//사용자가 입력한 카테고리 리스트 객체 만들기
+				this.$store.state.userSetCategory.forEach(value => {
+					let categoryObj = {};
+					categoryObj[value] = [];
+					this.$store.state.userSetMeal.push(categoryObj);
+				});
 			} else {
 				alert('등록한 카테고리가 없습니다.');
 			}

@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
 	state: {
 		btnDisplay: false,
+		userSetCategory: [],
 		categoryData: [
 			'한식',
 			'중식',

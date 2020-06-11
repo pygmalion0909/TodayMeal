@@ -39,13 +39,7 @@ export default {
 #test_layout {
 	margin: 10px auto;
 }
-li {
-	/* text-align: center; */
-}
 ul {
-	/* text-decoration: none; */
 	list-style: none;
-	/* padding: 0; */
-	/* margin: 0; */
 }
 </style>

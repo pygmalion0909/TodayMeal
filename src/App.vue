@@ -1,59 +1,51 @@
 <template>
 	<div id="app">
 		<div>
-			<b-card no-body style="max-width: 20rem;" img-src="https://placekitten.com/380/200" img-alt="Image" img-top id="test_layout">
+			<b-card id="test_layout" no-body style="max-width: 30rem;" img-src="https://placekitten.com/380/200" img-alt="Image" img-top>
 				<template v-slot:header>
-					<h4 class="mb-0">Today Meal</h4>
+					<h4 class="mb-0">
+						<a href="/">Today Meal</a>
+					</h4>
 				</template>
-				<AppNav></AppNav>
-				<b-card-body>
-					<!-- <router-view></router-view> -->
-					<!-- <b-card-title>Card Title</b-card-title>
-					<b-card-sub-title class="mb-2">Card Sub Title</b-card-sub-title>
-					<b-card-text>
-						Some quick example text to build on the card title and make up the bulk of the card's content.
-					</b-card-text> -->
-				</b-card-body>
-
 				<b-list-group flush>
-					<router-view></router-view>
-					<!-- <b-list-group-item>Cras justo odio</b-list-group-item>
-					<b-list-group-item>Dapibus ac facilisis in</b-list-group-item>
-					<b-list-group-item>Vestibulum at eros</b-list-group-item> -->
+					<b-list-group-item>
+						<AppNav></AppNav>
+					</b-list-group-item>
+
+					<b-list-group-item>
+						<router-view></router-view>
+					</b-list-group-item>
 				</b-list-group>
 				<b-card-footer>
-					<ul>
-						<li>@capyright superpil</li>
-						<li>@capyright superpil sfsdafasdfsdafasfasfeefw</li>
-						<li>@capyright superpil</li>
-						<li>@capyright superpil</li>
-					</ul>
+					<FooterPage></FooterPage>
 				</b-card-footer>
-
-				<!-- <b-card-img src="https://placekitten.com/480/210" alt="Image" bottom></b-card-img> -->
 			</b-card>
 		</div>
-		<!-- 실질 -->
-		<!-- <b-container class="bv-example-row">
-			<div>
-				<AppNav></AppNav>
-				<router-view></router-view>
-			</div>
-		</b-container> -->
 	</div>
 </template>
 
 <script>
 import AppNav from '@/components/AppNav';
+import FooterPage from '@/views/FooterPage';
 export default {
 	components: {
 		AppNav,
+		FooterPage,
 	},
 };
 </script>
 
 <style>
 #test_layout {
-	margin: 0 auto;
+	margin: 10px auto;
+}
+li {
+	/* text-align: center; */
+}
+ul {
+	/* text-decoration: none; */
+	list-style: none;
+	/* padding: 0; */
+	/* margin: 0; */
 }
 </style>

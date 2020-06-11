@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<router-link to="/">
-			<b-button type="button" id="todayMeal_btn" :disabled="$store.state.btnDisplay">Today Meal</b-button>
+			<!-- <b-button type="button" id="todayMeal_btn" :disabled="$store.state.btnDisplay">Today Meal</b-button> -->
 		</router-link>
 		<router-link to="/manual">
 			<b-button type="button" id="detail_btn" :disabled="$store.state.btnDisplay">Manual</b-button>

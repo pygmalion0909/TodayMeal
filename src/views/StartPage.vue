@@ -62,7 +62,7 @@ export default {
 			this.count++;
 			console.log(this.count);
 			if (this.count >= 3) {
-				console.log('초과!');
+				alert('답은정해져있다!!!!!! 니가 먹고 싶은거 먹어라!!!!!');
 				//조커사진 나오는 url로 이동 <새로고침하게 만들기>
 			} else {
 				this.todayMealContent = true;

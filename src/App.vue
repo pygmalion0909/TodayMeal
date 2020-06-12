@@ -28,6 +28,7 @@
 <script>
 import AppNav from '@/components/AppNav';
 import FooterPage from '@/views/FooterPage';
+
 export default {
 	components: {
 		AppNav,

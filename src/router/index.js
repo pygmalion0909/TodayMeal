@@ -6,10 +6,10 @@ Vue.use(VueRouter);
 export default new VueRouter({
 	mode: 'history',
 	routes: [
-		{
-			path: '/',
-			redirect: '/manual',
-		},
+		// {
+		// 	path: '/',
+		// 	redirect: '/',
+		// },
 		{
 			path: '/manual',
 			component: () => import('@/views/ManualPage.vue'),
@@ -22,9 +22,9 @@ export default new VueRouter({
 			path: '/userset',
 			component: () => import('@/views/UserSetPage.vue'),
 		},
-		{
-			path: '/*',
-			component: () => import('@/views/NotFound.vue'),
-		},
+		// {
+		// 	path: '/*',
+		// 	component: () => import('@/views/NotFound.vue'),
+		// },
 	],
 });
